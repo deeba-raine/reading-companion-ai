@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== TOP NAVIGATION ===== -->
+  <header>
+    <div class="brand">
+      <div class="mark">
+        <svg viewBox="0 0 20 20" fill="none">
+          <path d="M4 6h12M4 10h9M4 14h12" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h1>Book Assistant</h1>
+    </div>
+    <div class="status">
+      <span class="dot"></span> Offline Mode · Local Ollama
+    </div>
+  </header>
+
+  <!-- ===== MAIN APP LAYOUT ===== -->
+  <div class="app">
+
+    <!-- ===== LEFT COLUMN: DASHBOARD ===== -->
+    <div class="left-col">
+
+      <!-- Search Bar -->
+      <div class="search-wrap">
+        <div class="search-bar">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+            <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M13.5 13.5L18 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <input type="text" placeholder="Search your library, or find a book to add…" />
+          <button class="search-btn">Search</button>
+        </div>
+      </div>
+
+      <!-- Continue Reading Section -->
+      <section>
+        <div class="section-head">
+          <h2>Continue reading</h2>
+          <span>NLP progress tracking</span>
+        </div>
+        <div class="progress-grid">
+
+          <div class="progress-card">
+            <div class="cover-mini">📖</div>
+            <div class="progress-body">
+              <h3>Circe</h3>
+              <div class="meta">Madeline Miller · started Aug 14</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:52%"></div>
+              </div>
+              <div class="est">210 of 400 pages · est. finish Sep 12 (~18 pg/day)</div>
+            </div>
+          </div>
+
+          <div class="progress-card">
+            <div class="cover-mini">📖</div>
+            <div class="progress-body">
+              <h3>Project Hail Mary</h3>
+              <div class="meta">Andy Weir · started Aug 28</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:13%"></div>
+              </div>
+              <div class="est">64 of 476 pages · est. finish Oct 3 (~12 pg/day)</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section>
+        <div class="stat-grid">
+
+          <div class="stat-card">
+            <div class="label">🎯 Adaptive daily goal</div>
+            <div class="num">32 <small>/ 40 pages</small></div>
+            <div class="sub green">80% on track</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="label">🔥 Streak &amp; velocity</div>
+            <div class="num">12 <small>days</small></div>
+            <div class="sub muted">avg. 34 pages / session</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="label">📚 Books completed</div>
+            <div class="num">2 <small>finished</small></div>
+            <div class="sub amber">rated 4.5★ avg</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Recommendations Section -->
+      <section>
+        <div class="section-head">
+          <h2>Recommended for you</h2>
+          <span>Myth &amp; literary fantasy · 4 matches</span>
+        </div>
+        <div class="rec-grid">
+
+          <div class="rec-card">
+            <div class="rec-cover">📖</div>
+            <h3>The Song of Achilles</h3>
+            <div class="author">Madeline Miller</div>
+            <div class="match">94% match</div>
+            <div class="tag-row">
+              <span class="tag red">#mythology</span>
+              <span class="tag indigo">#devotion</span>
+            </div>
+            <div class="why">Similar to your 5★ rating on Circe</div>
+            <div class="ask-btn">Ask Assistant about this</div>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-cover">📖</div>
+            <h3>The Night Circus</h3>
+            <div class="author">Erin Morgenstern</div>
+            <div class="match">88% match</div>
+            <div class="tag-row">
+              <span class="tag amber">#magic</span>
+              <span class="tag indigo">#atmospheric</span>
+            </div>
+            <div class="why">High theme overlap with your notes</div>
+            <div class="ask-btn">Ask Assistant about this</div>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-cover">📖</div>
+            <h3>Piranesi</h3>
+            <div class="author">Susanna Clarke</div>
+            <div class="match">85% match</div>
+            <div class="tag-row">
+              <span class="tag red">#solitude</span>
+              <span class="tag indigo">#mystery</span>
+            </div>
+            <div class="why">Fits your short-session reading pace</div>
+            <div class="ask-btn">Ask Assistant about this</div>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-cover">📖</div>
+            <h3>Ariadne</h3>
+            <div class="author">Jennifer Saint</div>
+            <div class="match">81% match</div>
+            <div class="tag-row">
+              <span class="tag red">#mythology</span>
+              <span class="tag amber">#betrayal</span>
+            </div>
+            <div class="why">Same era &amp; themes as your top-rated reads</div>
+            <div class="ask-btn">Ask Assistant about this</div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ===== RIGHT COLUMN: CHAT SIDEBAR ===== -->
+    <div class="chat-col">
+      <div class="chat-panel">
+
+        <div class="chat-head">
+          <h2>✏️ Ask the Assistant</h2>
+          <p>Get picks, or talk through what you're reading</p>
+        </div>
+
+        <div class="chat-thread" id="thread">
+          <div class="bubble assistant">
+            Hi! Tell me what you're in the mood for, or paste a passage from Circe you want to reflect on.
+          </div>
+          <div class="bubble user">
+            I loved the isolation and mythology in Circe — what should I read next?
+          </div>
+          <div class="bubble assistant">
+            Got it — I pulled that from your highlighted passage too. Updated your recommendations on the left based on these themes:
+            <div class="badges">
+              <span class="tag red">#isolation</span>
+              <span class="tag indigo">#identity</span>
+              <span class="tag amber">#mythology</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-input-row">
+          <input id="chatInput" type="text" placeholder="Type your reading preferences…" />
+          <button class="send-btn" id="sendBtn" aria-label="Send">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+              <path d="M3 10L17 3L11 17L9 11L3 10Z" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
