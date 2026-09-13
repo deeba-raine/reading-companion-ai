@@ -86,13 +86,13 @@ header {
 /* ===== MAIN LAYOUT ===== */
 .app {
   max-width: 1320px;
-  margin: 0 auto;
+  margin: 0 0 0 100px;
   padding: 28px 28px 60px;
 }
 
 .left-col {
-  max-width: 920px;
-  margin-right: 420px;
+  max-width: 950px;
+  margin-right: 220px;
 }
 
 section + section {
@@ -196,6 +196,13 @@ section + section {
   justify-content: center;
   color: var(--faint);
   font-size: 18px;
+  overflow: hidden;
+}
+
+.cover-mini img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .progress-body {
@@ -305,6 +312,13 @@ section + section {
   justify-content: center;
   font-size: 26px;
   color: var(--faint);
+  overflow: hidden;
+}
+
+.rec-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .rec-card h3 {
